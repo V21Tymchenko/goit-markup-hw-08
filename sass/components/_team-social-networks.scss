@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+.social__link {
+  width: 44px;
+  height: 44px;
+  background-color: $mainColor;
+ border-radius: 50%;
+
+ @extend %allcenter;
+
+ @include transition(background-color);
+
+ &:hover,
+ &:focus{
+     background-color: $accentColor;
+ }
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+
+  fill: #afb1b8;
+}
+.social__icon {
+ @include transition(fill);
+ .social__link:hover & {
+  fill: $mainColor;
+  }
+}

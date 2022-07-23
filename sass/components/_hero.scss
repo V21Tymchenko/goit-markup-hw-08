@@ -1,0 +1,74 @@
+.hero {
+  max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  text-align: center;
+
+  background-color: $secondaryColor;
+  background-image: linear-gradient(
+      to left,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../image/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__button {
+  color: $buttonColor;
+  background-color: $accentColor;
+
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+
+  border-style: none;
+  border-radius: 4px;
+
+  min-width: 200px;
+  padding: 10px 30px;
+  display: inline-block;
+
+  @include transition(box-shadow);
+  &:hover,
+  &:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.hero__title {
+  color: $mainColor;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+  @include transition(opacity);
+  @include transition(visibility);
+  z-index: 1;
+}

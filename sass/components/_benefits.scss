@@ -1,0 +1,25 @@
+.benefits__list {
+  display: flex;
+}
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
+.benefits__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.benefits__text {
+  color: $secondaryTextColor;
+
+  line-height: 1.71;
+  min-width: 270px;
+}
+.benefits__icon {
+  width: 270px;
+  height: 120px;
+  background-color: $buttonColor;
+
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}

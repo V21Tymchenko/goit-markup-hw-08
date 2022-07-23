@@ -1,0 +1,40 @@
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__icon {
+  fill: #afb1b8;
+
+ @include transition(fill);
+
+ .clients__link:hover &,
+.clients__link:focus & {
+  fill: $accentColor;
+}
+}
+
+.clients__link {
+ width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  @include transition(border-color);
+
+  @extend %allcenter;
+
+ &:hover,
+ &:focus {
+  border-color: $accentColor;
+  }
+}
+

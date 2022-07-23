@@ -1,0 +1,125 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.container {
+  @extend %container;
+}
+.header__container {
+  @extend %center;
+}
+.header__nav {
+  @extend %center;
+}
+.header__list {
+  display: flex;
+}
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.header__logo {
+  color: #000000;
+
+  margin-right: 93px;
+}
+.header__link {
+  color: $mainTextColor;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+.logo-web,
+.current {
+  color: $accentColor;
+}
+.current {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0%;
+
+    width: 100%;
+    height: 4px;
+
+    content: '';
+    background-color: $accentColor;
+    border-radius: 2px;
+  }
+}
+
+.header__link {
+  display: block;
+}
+.header__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts__envelope,
+.contacts__phone {
+  margin-right: 10px;
+  fill: $secondaryTextColor;
+}
+.contacts__envelope {
+  height: 12px;
+  width: 16px;
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $accentColor;
+  }
+}
+.contacts__phone {
+  height: 16px;
+  width: 10px;
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $accentColor;
+  }
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.contacts__link .contacts__phone,
+.contacts__link .contacts__envelope {
+ @include transition (fill);
+}
+.contacts__item {
+  @include transition();;
+}
+
+.contacts__link {
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+.header__list,
+.contacts__link {
+  color: $secondaryTextColor;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include transition();
+}
+.contacts__link {
+  @extend %center;
+}
