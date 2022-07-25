@@ -101,7 +101,7 @@ background-color: $secondaryColor;
   @media screen and (min-width:1200px){
   background-color: var($secondaryColor);
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../../image/hero.jpg');
+    url('../image/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -109,14 +109,14 @@ background-color: $secondaryColor;
  @media screen and (min-width:$tablet){
    background-color: var($secondaryColor);
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../../image/tablet-herox1.jpg');
+    url('../image/tablet-herox1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
  }
   @media screen and (max-width:$tablet) {
     background-color: var($secondaryColor);
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../../image/hero-mobilex1.png');
+    url('../image/hero-mobilex1.png');
   background-repeat: no-repeat;
   background-size: cover;
  }
