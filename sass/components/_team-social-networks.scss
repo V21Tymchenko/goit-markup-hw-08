@@ -1,32 +1,105 @@
-.social {
+// .social {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .social__link {
+//   width: 44px;
+//   height: 44px;
+//   background-color: $mainColor;
+//  border-radius: 50%;
+
+//  @extend %allcenter;
+
+//  @include transition(background-color);
+
+//  &:hover,
+//  &:focus{
+//      background-color: $accentColor;
+//  }
+// }
+
+// .social__icon {
+//   width: 20px;
+//   height: 20px;
+
+//   fill: #afb1b8;
+// }
+// .social__icon {
+//  @include transition(fill);
+//  .social__link:hover & {
+//   fill: $mainColor;
+//   }
+// }
+
+.styles-title{
+  font-size: 28px;
+line-height: 1.17;
+letter-spacing: 0.03em;
+color:$mainTextColor;
+ margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
-.social__link {
-  width: 44px;
-  height: 44px;
-  background-color: $mainColor;
- border-radius: 50%;
-
- @extend %allcenter;
-
- @include transition(background-color);
-
- &:hover,
- &:focus{
-     background-color: $accentColor;
+.team__photo{
+  @media screen and (max-width:767px) {
+  width: 450px;
+  height: 460px;
+  margin-right: 0;
+  }
+@media screen and (max-width:1199px){
+  width: 354px;
+height: 374px;
+margin: 0;
+}
+}
+ .team__photo{
+  display: block;
+  @media screen and (max-width:767px){
+ width: 450px;
+height: 460px;
+  }
  }
-}
-
-.social__icon {
-  width: 20px;
+ .social__icon {
+   width: 20px;
   height: 20px;
 
   fill: #afb1b8;
-}
-.social__icon {
- @include transition(fill);
- .social__link:hover & {
-  fill: $mainColor;
+ }
+ .team{
+   margin:-15px;
+   @media screen and (max-width:1199px){
+    display: flex;
+    flex-wrap: wrap;;
+   
   }
-}
+  @media screen and (min-width:1200px) {
+    display: flex;
+  }
+ }
+ .team__list{
+  @media screen and (max-width:767px){
+    margin-bottom: 30px;
+  }
+    margin: 15px;
+ }
+ .social__icon {
+  @include transition(fill);
+  .social__link:hover & {
+   fill: $mainColor;
+   }
+ }
+  .social__link {
+   width: 44px;
+   height: 44px;
+   background-color: $mainColor;
+  border-radius: 50%;
+
+  @extend %allcenter;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus{
+      background-color: $accentColor;
+  }
+ }

@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="./css/portfolio.min.css"/>
   </head>
   <body>
-    <header class="header">
+     <header class="header">
       <div class="header__container container">
-        <nav class="header__nav">
+       <div class="header__logo-container">
           <a class="header__logo logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
+              <button data-menu-button aria-expanded="false" aria-controls="menu-container" type="button" class="header__button">
+          <svg width="40px" height="40px" class="header__icon" aria-label="Переключатель мобильного меню">
+            <use href="./image/icons.svg#close-mobile" class="header__icon-close" href=""></use>
+              <use  href="./image/icons.svg#menu-mobile" class="header__icon-menu" ></use>   
+          </svg>
+          </button>
+   </div>
+           <div class="header__menu-container" id="menu-container" data-menu>
+      <nav class="header__nav">
           <ul class="header__list">
             <li class="header__item current-item">
               <a class="header__link" href="./index.html">Студия</a>
@@ -21,8 +30,8 @@
             </li>
             <li class="header__item"><a class="header__link" href="">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contacts">
+        </nav>      
+        <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com">
               <svg class="contacts__envelope">
@@ -34,6 +43,12 @@
                 <use href="./image/icons.svg#phone"></use></svg>+38 096 111 11 11</a>
           </li>
         </ul>
+        <ul class="social-networks">
+                  <li class="social-networks__list"><a href="" class="social-networks__item padding-no">Instagram</a></li>
+                  <li class="social-networks__list"><a href="" class="social-networks__item padding-yes">Twitter</a></li>
+                  <li class="social-networks__list"><a href="" class="social-networks__item padding-yes">Facebook</a></li>
+                  <li class="social-networks__list"><a href="" class="social-networks__item padding-yes">LinkedIn</a></li>
+                </ul>
       </div>
     </header>
     <main>
@@ -51,7 +66,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/website.jpg" alt="Экран ноутбука с примером веб-сайта" width="370" />
+                  <img class="works__photo" srcset="./image/work1@1.jpg x1, ./image/work1@2.jpg x2" src="./image/website.jpg" alt="Экран ноутбука с примером веб-сайта" width="370" />
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -67,7 +82,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/design.jpg" alt="Постер, где два баскетболиста играют в баскетбол" width="370" />
+                  <img class="works__photo" srcset="./image/work2@1.jpg x1, ./image/work@2.jpg x2 " src="./image/design.jpg" alt="Постер, где два баскетболиста играют в баскетбол" width="370" />
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -75,7 +90,7 @@
                   </p>
                 </div>
                 <div class="works__container">
-                  <h2 class="works__title">Постер New Orlean vs Golden Star</h2>
+                  <h2 class="works__title spacial-title">Постер New Orlean vs Golden </h2>
                   <p class="works__text">Дизайн</p>
                 </div>
               </a>
@@ -83,7 +98,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/app.jpg" alt="Постер с рыбой и текстом названия ресторана The seafood restaurant" width="370" />
+                  <img class="works__photo" srcset="./image/work3@1.jpg x1, ./image/work3@2.jpg x2" src="./image/app.jpg" alt="Постер с рыбой и текстом названия ресторана The seafood restaurant" width="370" />
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -99,7 +114,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/marketing.jpg" alt="Черные наушники" width="370"/>
+                  <img class="works__photo" srcset="./image/work4@1.jpg x1, ./image/work4@2.jpg x2 " src="./image/marketing.jpg" alt="Черные наушники" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -115,7 +130,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/app2.jpg" alt="Белая и коричневая коробка" width="370"/>
+                  <img class="works__photo" scrset="./image/work5@1.jpg x1, ./image/work5@2.jpg x2" src="./image/app2.jpg" alt="Белая и коричневая коробка" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -131,7 +146,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/website2.jpg" alt="Экран компьютера с примером веб-сайта" width="370"/>
+                  <img class="works__photo" srcset="./image/work6@1.jpg x1, ./image/work6@2.jpg x2" src="./image/website2.jpg" alt="Экран компьютера с примером веб-сайта" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -147,7 +162,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/design2.jpg" alt="Журнал с открытыми страницами" width="370"/>
+                  <img class="works__photo" srcset="./image/work7@1.jpg x1, ./image/work7@2.jpg" src="./image/design2.jpg" alt="Журнал с открытыми страницами" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -163,7 +178,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/marketing2.jpg" alt="Белый лейбл" width="370"/>
+                  <img class="works__photo" srcset="./image/work8@1.jpg x1, ./image/work8@2.jpg x2" src="./image/marketing2.jpg" alt="Белый лейбл" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -179,7 +194,7 @@
             <li class="works__item">
               <a class="works__nav" href="">
                 <div class="works__card">
-                  <img class="works__photo" src="./image/app3.jpg" alt="Ноутбук на которм открыто приложение Growing Business" width="370"/>
+                  <img class="works__photo"  srcset="./image/work9@1.jpg x1, ./image/work9@2.jpg x2" src="./image/app3.jpg" alt="Ноутбук на которм открыто приложение Growing Business" width="370"/>
                   <p class="works__text--up">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -197,12 +212,14 @@
       </section>
     </main>
     <!--Footer-->
-    <footer class="footer">
-      <div class="container footer__container">
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__general-container">
+
         <div class="footer__address">
           <a class="logo footer__logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
           <address>
-            <ul>
+            <ul class="footer__list" >
               <li class="footer__item">
                 <a class="footer__link--address" href="https://www.google.com/maps/place/бульвар+Лесі+Українки,+26,+Київ,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
               </li>
@@ -219,28 +236,28 @@
         <div class="join">
           <b class="join__call">присоединяйтесь</b>
           <ul class="join__list">
-            <li>
+            <li class="join__item" >
               <a class="join-link" href="">
                 <svg class="join__svg">
                   <use width="20px" height="20px" href="./image/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join__item" >
               <a class="join-link" href="">
                 <svg class="join__svg">
                   <use width="20px" height="20px" href="./image/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join__item" >
               <a class="join-link" href="">
                 <svg class="join__svg">
                   <use width="20px" height="20px" href="./image/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="join__item" > 
               <a class="join-link" href="">
                 <svg class="join__svg">
                   <use width="20px" height="20px" href="./image/icons.svg#linkedin"></use>
@@ -249,6 +266,8 @@
             </li>
           </ul>
         </div>
+      </div>
+       
         <div class="subscribe">
         <b class="subscribe__title">Подпишитесь на рассылку</b>
         <ul class="subscribe__list">
@@ -266,5 +285,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

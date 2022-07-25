@@ -1,40 +1,106 @@
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+// .clients__title {
+//   font-weight: 700;
+//   font-size: 36px;
+//   line-height: 1.16;
+//   text-align: center;
 
+//   margin-bottom: 50px;
+// }
+// .clients__list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .clients__icon {
+//   fill: #afb1b8;
+
+//  @include transition(fill);
+
+//  .clients__link:hover &,
+// .clients__link:focus & {
+//   fill: $accentColor;
+// }
+// }
+
+// .clients__link {
+//  width: 170px;
+//   height: 92px;
+//   border: 1px solid #afb1b8;
+//   border-radius: 4px;
+
+//   @include transition(border-color);
+
+//   @extend %allcenter;
+
+//  &:hover,
+//  &:focus {
+//   border-color: $accentColor;
+//   }
+// }
+
+.clients__title{
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $mainTextColor;
+  text-align: center;
+  @media screen and (max-width:1199px){
+  font-size: 28px;
+line-height: 1.17;
+
+@media screen and (max-width:1199px) {
+  margin-bottom: 30px;
+}
+  }
+@media screen and (min-width:1200px){
+  font-size: 36px;
+line-height: 1.16;
   margin-bottom: 50px;
 }
-.clients__list {
-  display: flex;
-  justify-content: space-between;
 }
-
-.clients__icon {
-  fill: #afb1b8;
-
- @include transition(fill);
-
- .clients__link:hover &,
-.clients__link:focus & {
-  fill: $accentColor;
-}
-}
-
-.clients__link {
- width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
+ .clients__link {
+   border: 1px solid #afb1b8;
   border-radius: 4px;
 
   @include transition(border-color);
 
-  @extend %allcenter;
+   @extend %allcenter;
 
- &:hover,
- &:focus {
+  &:hover,
+  &:focus {
   border-color: $accentColor;
   }
-}
 
+ }
+ .clients__link{
+  @media screen  and (max-width:767px){
+ width: 210px;
+height: 92px;
+  }
+  @media screen and (min-width:$tablet) and (max-width:1199px){
+width: 226px;
+height: 92px;
+  }
+@media screen and (min-width:1200px){
+  width: 170px;
+ height: 92px;
+}
+ }
+ .clients__item{
+    margin: 15px; 
+ }
+
+ .clients__list{
+ display: flex;
+flex-wrap: wrap;
+  margin: -15px;
+
+ }
+ .clients__icon {
+   fill: #afb1b8;
+
+  @include transition(fill);
+  .clients__link:hover &,
+ .clients__link:focus & {
+   fill: $accentColor;
+ }
+}

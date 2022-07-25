@@ -1,20 +1,40 @@
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  min-width: 528px;
-  min-height: 581px;
-  background: $mainColor;
+  padding: 40px;
+   background: $mainColor;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  padding: 40px;
-
-  transform: translate(-50%, -50%);
   @include transition (opacity);
   @include transition (visibility);
-}
+
+  @media screen  and (min-width:$desktop){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+width: 528px;
+  height: 609px;
+
+  }
+ 
+ @media screen and (max-width:$tablet){
+   position: absolute;
+   top:93px;
+   width: 505px;
+height: 609px;
+ }
+ @media screen and (min-width:$tablet)and (max-width:1199px){
+     width: 520px;
+height: 609px;
+  position: absolute;
+ margin: 0 auto;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ }
+ }
+
 .form__item .form__input,
 .form__item .form__textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -27,16 +47,21 @@
   padding-left: 42px;
 }
 .modal__text {
-  font-weight: 700;
+  color: $mainTextColor;
+ text-align: center;
+ font-weight: 700;
+  @media screen and (min-width:$desktop){
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
-
-  margin-bottom: 12px;
-  color: $mainTextColor;
+  margin-bottom: 10px;
+  }
+  @media screen and (max-width:1199px){
+    font-size: 20px;
+    line-height: 1.5;
+     margin-bottom: 12px;
+  }
+ 
 }
-
-
 .form__item .form__label {
   margin-bottom: 4px;
 
@@ -128,7 +153,12 @@
 }
 
 .policy__input {
-  margin-right: 9px;
+  margin-right: 8px;
+    @media screen and (max-width:$tablet){
+  margin-right: 2px;
+  
+   
+  }
 }
 .form__input
 {@include transition(border); 
@@ -150,9 +180,17 @@ border: 1px solid #2196f3;
   display: inline-block;
   width: 15px;
   height: 15px;
-  left: 40px;
-  transform: translateY(7px);
+  left: 38px;
+  top: 438px;
   background-color: $mainColor;
+  @media screen and (max-width:474px){
+  top:74%;
+  left: 68px;
+  }
+  @media screen and (min-width:$tablet) and (max-width:1199px){
+    left:39px;
+ transform: translateY(3px);
+  }
 }
 
 .policy__icon--marked {
@@ -160,15 +198,47 @@ border: 1px solid #2196f3;
   display: inline-block;
   width: 16px;
   height: 15px;
+   left: 38px;
+  top: 438px;
   appearance: none;
-  opacity: 0;
-  left: 40px;
-  transform: translateY(7px);
-  @include transition(opacity);
+opacity: 0;
+   @include transition(opacity);
   .policy__input:checked ~ & {
   opacity: 1;
+ 
+   @media screen and (min-width:$tablet) and (max-width:1199px){
+    left: 39px;
+ transform: translateY(3px);
+  }
 }
 }
+
+.policy__icon--marked{
+   @media screen and (max-width:767px){
+      top:476px;
+  left: 40px;
+  }
+  @media screen and (min-width:768px) and(max-width:1199px){
+      left:36px;
+    top: 443px;
+  }
+}
+
+ 
+
+.policy__icon--empty{
+  @media screen and (max-width:767px){
+     top:476px;
+  left: 40px;
+  }
+}
+.policy__icon--empty{
+  @media screen and (min-width:768px)and (max-width:1199px){
+    left:38px;
+    top: 443px;
+  }
+}
+
 .modal__button--close {
   position: absolute;
   top: 8px;
