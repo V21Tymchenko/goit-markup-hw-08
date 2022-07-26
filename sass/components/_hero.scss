@@ -94,6 +94,9 @@ background-color: $secondaryColor;
   height: 400px;
   padding-top:118px;
   padding-botton:118px;
+  @media screen and (min-width:1200px){
+    height: 600px;
+  }
  }
 
 }
@@ -103,10 +106,10 @@ background-color: $secondaryColor;
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../image/hero.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+
   background-position: center;
 }
- @media screen and (min-width:$tablet){
+ @media screen and (min-width:$tablet) and (max-width:1199px){
    background-color: var($secondaryColor);
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../image/tablet-herox1.jpg');
@@ -127,7 +130,6 @@ background-color: $secondaryColor;
   height:600px;
   min-width:1600px;
    text-align: center;
-    max-width: 1600px;
  padding-top: 200px;
   padding-bottom: 200px;
  }
@@ -217,7 +219,7 @@ line-height: 1.61;
   left:0;
   right: 0;
   bottom: 0;
-  overflow: scroll;
+  overflow-y: scroll;
 
   }
 //      @media screen and (max-width:$desktop){

@@ -137,6 +137,11 @@
      width:1200px;
   }
 }
+.header{
+  @media screen and (max-width:767px){
+    width:100%
+  }
+}
 .logo {
   font-family: 'Raleway', sans-serif;
  font-weight: 700;
@@ -343,16 +348,21 @@ font-size: 24px;
   .header__button{
     @media screen  and (max-width:767px){
     display:inline-flex;
-    margin: 0;
     padding: 0;
     border:0;
     background-color: transparent;
     cursor: pointer;
-    z-index: 1;
+ 
     }
     @media screen and (min-width:$tablet){
       display: none;
     }
+    @media screen  and (max-width:767px){
+  position: absolute;
+  top:10px;
+  right:15px;
+   z-index: 999;
+}
    
   }
   .header__button .header__icon-close{
@@ -368,6 +378,7 @@ font-size: 24px;
   .header__container{
     @media screen and (max-width:767px){
         position:relative;
+     
     }
    
   }
@@ -375,7 +386,6 @@ font-size: 24px;
     @media screen and (min-width:$tablet) {
       display: flex;
       align-items: center;
-
     }
  
  }
@@ -385,32 +395,48 @@ font-size: 24px;
     @media screen and (min-width:$tablet) {
       display: flex;
       align-items: center;
+    
+    }
+    @media screen and (max-width:767px){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height:100vh;
     }
  }
 
   .header__logo-container{
-   
     display:flex;
     align-items: center;
-    justify-content: space-between;
-     
+    
+    @media screen and (max-width:767px){
+      display: block;
+    }
+  @media screen and (max-width:767px){
+    padding: 16px 15px;
+  }
+ 
   }
  
   .header__menu-container{
     @media screen and (max-width:767px){
-       
     position:absolute;
     display:none;
     top:100%;
     left:0;
-    width:100%;
-    transform: translateY(-45px);;
+   width:480px;
+   max-height: 796px;
+    transform: translateY(-45px);
     background-color:$mainColor;
     padding: 48px, 40px;
    z-index: 0;
+  overflow:hidden;
    @include transition (display);
     &.is-open{
-      display: block;
+      display: flex;
+      position: fixed;
+      top: 43px;
+      width:100%;
        padding-left: 40px;
        padding-top: 48px;
        padding-bottom: 48px;
@@ -420,8 +446,9 @@ font-size: 24px;
      }
      @media screen and (min-width:$tablet){
       display: flex;
-    
+  
      }
+   
   }
 // /@
  .header__item:not(:last-child){
@@ -430,16 +457,7 @@ font-size: 24px;
   }
  
  }
-.header__list{
 
-  @media screen and (max-width:767px){
-     margin-bottom: 302px;
-  }
- @media screen and (min-width:$tablet){
-  display: flex;
-
- }
-}
 .contacts__list{
   @media screen and (max-width:767px) {
   flex-direction: column-reverse;
@@ -456,11 +474,6 @@ font-size: 24px;
 
   } 
 }
-
-
-
-
-
 .social-networks{
  display: flex;
  
@@ -522,10 +535,11 @@ border-right: 1px solid rgba(33, 33, 33, 0.2);
     margin-right: 84px;
   }
    @media screen and (min-width:1200px) {
-
     margin-right: 297px;
-  
 }
+ @media screen and (max-width:767px){
+  flex-grow: 1;
+ }
  }
 
  .header {
@@ -533,3 +547,10 @@ border-right: 1px solid rgba(33, 33, 33, 0.2);
   border-bottom: 1px solid #ececec;
 
  }
+ .header__list{
+
+ @media screen and (min-width:$tablet){
+  display: flex;
+
+ }
+}

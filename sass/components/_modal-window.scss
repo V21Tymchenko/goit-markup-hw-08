@@ -13,25 +13,25 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-width: 528px;
+min-width: 528px;
   height: 609px;
 
   }
  
- @media screen and (max-width:$tablet){
+ @media screen and (max-width:767px){
+ 
    position: absolute;
-   top:93px;
-   width: 505px;
-height: 609px;
+   width: 450px;
+   max-height: 609px;
+
  }
  @media screen and (min-width:$tablet)and (max-width:1199px){
-     width: 520px;
-height: 609px;
+  width: 450px;
   position: absolute;
- margin: 0 auto;
  top:50%;
  left:50%;
- transform: translate(-50%,-50%);
+ transform: translateX(-50%);
+
  }
  }
 
@@ -187,10 +187,7 @@ border: 1px solid #2196f3;
   top:74%;
   left: 68px;
   }
-  @media screen and (min-width:$tablet) and (max-width:1199px){
-    left:39px;
- transform: translateY(3px);
-  }
+
 }
 
 .policy__icon--marked {
@@ -205,22 +202,17 @@ opacity: 0;
    @include transition(opacity);
   .policy__input:checked ~ & {
   opacity: 1;
- 
-   @media screen and (min-width:$tablet) and (max-width:1199px){
-    left: 39px;
- transform: translateY(3px);
   }
-}
 }
 
 .policy__icon--marked{
    @media screen and (max-width:767px){
       top:476px;
-  left: 40px;
+   left: 48px;
   }
   @media screen and (min-width:768px) and(max-width:1199px){
-      left:36px;
-    top: 443px;
+    left:48px;
+    top: 475px;
   }
 }
 
@@ -229,13 +221,13 @@ opacity: 0;
 .policy__icon--empty{
   @media screen and (max-width:767px){
      top:476px;
-  left: 40px;
+  left: 48px;
   }
 }
 .policy__icon--empty{
   @media screen and (min-width:768px)and (max-width:1199px){
-    left:38px;
-    top: 443px;
+    left:48px;
+    top: 475px;
   }
 }
 

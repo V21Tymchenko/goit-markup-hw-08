@@ -294,3 +294,13 @@ height: 294px;
     margin: -15px;
   }
  }
+.section{
+  @media screen and (max-height:1199px){
+    padding-top:60px;
+  padding-bottom: 60px;
+  }
+  @media screen and (min-width:1200px){
+     padding-top:94px;
+  padding-bottom: 94px;
+  }
+}
