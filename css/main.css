@@ -957,8 +957,8 @@ img {
     transform: translateY(-45px);
     background-color: #ffffff;
     padding: 48px, 40px;
-    z-index: 0;
     overflow: hidden;
+    z-index: 998;
     transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__menu-container.is-open {
@@ -1147,7 +1147,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
-    min-width: 1600px;
+    max-width: 1600px;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -1577,16 +1577,10 @@ img {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .benefits__container {
-    width: 450px;
-    height: 120px;
     margin-bottom: 30px;
-  }
-}
-@media screen and (max-width: 768px) and (min-width: 768px) and (max-width: 1199px) {
-  .benefits__container {
-    width: 354px;
+    width: 450px;
     height: 120px;
   }
 }
@@ -1601,6 +1595,14 @@ img {
 .benefits__icon {
   width: 70px;
   height: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .benefits__container {
+    width: 354px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
